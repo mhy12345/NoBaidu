@@ -1,0 +1,10 @@
+.no-baidu-warn-header{
+	position:fixed; 
+	top:0px; 
+	background-color:#ff9b71;
+	width:100%; 
+	z-index:999999;
+}
+.no-baidu-warn-content {
+	margin:10px;
+}
