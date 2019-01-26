@@ -2,8 +2,8 @@
 /*
  * Plugin Name: No-baidu plugin
  * Plugin URI: http://mhy12345.xyz/no-baidu/
- * Description: 此插件将在页面的顶端，显示一段抵制信息.
- * Version: 1.0
+ * Description: 当访问者通过百度访问网站时，此插件将在页面的顶端，显示一段抵制信息.
+ * Version: 1.1
  * Author: mhy12345
  * Author URI: http://mhy12345.xyz/no-baidu/
  * License: GPL
@@ -37,12 +37,11 @@ class NoBaiduPlugin
 		{
 			if ($this->options['method'] == 0) {
 				wp_enqueue_style( 'no_baidu_style', plugins_url( 'css/no-baidu-view-header.css', __FILE__ ));
-				include "no-baidu-view-header.php";
+				include "views/header.php";
 			}
 			else {
-				wp_enqueue_style( 'no_baidu_style', plugins_url( 'css/no-baidu-view-header.css', __FILE__ ));
-				include "no-baidu-view-page.php";
-				exit();
+				wp_enqueue_style( 'no_baidu_style', plugins_url( 'css/no-baidu-view-page.css', __FILE__ ));
+				include "views/page.php";
 			}
 		}
 	}
@@ -50,7 +49,7 @@ class NoBaiduPlugin
 	public function no_baidu_install() {  
 		$no_baidu_options = Array();
 		$no_baidu_options['method'] = 0;
-		$no_baidu_options['change_rebots'] = 0;
+		$no_baidu_options['change_robots'] = 0;
 		$no_baidu_options['warn_text'] = '我们发现您是通过百度找到这个页面的，不过我们并不推荐这么做，不妨考虑用其他搜索引擎。';
 		add_option("no_baidu_option", $no_baidu_options);
 	}
