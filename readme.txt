@@ -21,7 +21,7 @@ This plugin are designed for chinese wordpress user's who do not like Baidu and 
  
 == Contribution ==
 
-Email me (maohanyang789@163.com) if you have any other requirements, or you can also contribute in my [git repository](https://github.com/mhy12345/NoBaidu). 
+Email me (maohanyang789@163.com) if you have any other requirements, or you can also contribute in my git repository (https://github.com/mhy12345/NoBaidu). 
 
 == Frequently Asked Questions ==
  
